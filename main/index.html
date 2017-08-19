@@ -1,0 +1,519 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1280">
+<title>Dream</title>
+<link href="style.css" type="text/css" rel="stylesheet"/>
+<link href="css/default.css" type="text/css" rel="stylesheet"/>
+<link href="css/animate.css" type="text/css" rel="stylesheet"/>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&language=ru"></script>
+
+<script src="js/modernizr.custom.97074.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.hoverdir.js"></script>	
+<script type="text/javascript">
+	$(function() {
+		$(' #da-thumbs > li ').each( function() { $(this).hoverdir(); } );
+	});
+</script>
+
+<script src="js/mobilyslider.js" type="text/javascript"></script>
+<script src="js/init.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="js/animation.js"></script>
+<script type="text/javascript" src="js/perevirka.js"></script>
+
+<script type="text/javascript" language="javascript" src="js/jquery.carouFredSel-5.2.2-packed.js"></script>
+<script type="text/javascript" language="javascript">
+			$(function() {
+				$('#foo2').carouFredSel({
+					prev: '#prev2',
+					next: '#next2',
+					auto: false
+				});
+			});
+			
+	$(window).scroll(function (){
+			if ($(this).scrollTop() > 100) {
+				$(".menu").addClass("animated fadeInDown");
+				$('.menu').css({
+					'position': 'fixed',
+					'min-width': '1280px',
+					'width': '100%',
+					'top': '0',
+					'display': 'block',
+					'z-index': '9999999999',
+				});	
+				
+			} else {
+				$('.menu').css({
+					'position': 'fixed',
+					'min-width': '1280px',
+					'width': '100%',
+					'top': '0px',
+					'display': 'none',
+				});			
+			}
+	});
+
+$(document).ready(function() {	
+	$("a.topLink").click(function() {
+		$("html, body").animate({
+			scrollTop: $($(this).attr("href")).offset().top-40 + "px"
+		}, {
+			duration: 600
+		});
+		return false;
+	});	
+	
+	
+	if (navigator.appVersion.indexOf("Mac")!=-1){
+	   $("#ph_phone").css('height', '60px');
+	   $("#ph_phone").css('padding-top', '5px');
+	   $("#ph_phone").css('padding-bottom', '5px');
+	   $("#ph_phone").css('margin-top', '-5px');
+	   
+	   $("#menu_ph").css('top', '2px');
+	   
+	   if($.browser.mozilla){
+			$("#ph_phone").css('line-height', '74px');
+			$("#ph_phone").css('margin-top', '0px');
+		}
+		
+	}
+	
+	
+	
+	
+});	
+</script>
+
+
+<script src="http://maps.api.2gis.ru/2.0/loader.js" data-id="dgLoader"></script>
+ <script>
+    var map;
+    DG.then(function () {
+        map = DG.map('map', {
+            "center": [43.789753, 131.947977],
+            "zoom": 16
+        });
+        DG.marker([43.789753, 131.947977]).addTo(map);
+        map.scrollWheelZoom.disable();
+        });
+</script>
+
+</head>
+<body>
+
+<div class="menu">
+	<div class="content">
+		<a href="/"><img src="img/logo2.png" alt=""/></a>
+		<ul>
+			<li><a href="#">услуги</a></li>
+			<li><a href="#">портфолио</a></li>
+			<li><a href="#">наши клиенты</a></li>
+			<li><a href="#">контакты</a></li>
+			<li><a class="li-active" href="#">заказать</a></li>
+		</ul>
+		<span id="menu_ph">(4234)<b>32 53 57</b></span>
+		<div class="skype">
+			<p>Skype: <b>order2cubes</b></p>
+			<p>E-mail: <u>order@2cubes.ru</u></p>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+
+<div class="header">
+	<div class="content">
+		<ul>
+			<li><a href="#">услуги</a></li>
+			<li><a href="#">портфолио</a></li>
+			<li><a href="#">наши клиенты</a></li>
+			<li><a href="#">контакты</a></li>
+			<li><a class="li-active" href="#">заказать</a></li>
+		</ul><div class="clear"></div>
+		
+		<a href="/"><img src="img/logo.png" class="logo" alt=""/></a>
+		<span>Design Programing Photography</span>
+		<div class="clear"></div>
+	</div>
+</div>
+
+<div class="serviced">
+	<div class="content">
+		<div class="button-one"><a href="#port" class="topLink">
+			<span>Портфолио</span><div class="clear"></div>
+			<img src="img/arrow.png" alt=""/></a>
+		</div>
+		
+		<div class="serviced-block ml">
+			<a  href="#">Разрабатываем</a>
+			<div class="serviced-span">1</div>
+			<p>Надежное программное обеспечение — залог финансового и организационного успеха бизнеса независимо от его масштаба и сферы деятельности С помощью наших разработок вы сможете автоматизировать внутренние процессы своей компании, взять под контроль общение с клиентами, внедрить уникальное.</p>
+		</div>
+		<div class="line"></div>
+		
+		<div class="serviced-block ml2">
+			<a  href="#">Продвигаем</a>
+			<div class="serviced-span">2</div>
+			<p>Надежное программное обеспечение — залог финансового и организационного успеха бизнеса независимо от его масштаба и сферы деятельности С помощью наших разработок вы сможете автоматизировать внутренние процессы своей компании, взять под контроль общение с клиентами, внедрить уникальное ПО для выполнения задач, характерных только для вашего предприятия, получить объективную отчётность и т.д.</p>
+		</div>
+		<div class="line"></div>
+		
+		<div class="serviced-block ml2">
+			<a  href="#">Сопровождаем</a>
+			<div class="serviced-span">3</div>
+			<p>Надежное программное обеспечение — залог финансового и организационного успеха бизнеса независимо от его масштаба и сферы деятельности </p>
+		</div><div class="clear"></div>
+	</div>
+</div>
+
+<div class="slider-bg">
+	<div class="slider slider3">
+		<div class="sliderContent">
+			<div class="item">
+				<div class="item-left">
+					<h1>Создание Landing Page</h1>
+					<p>Целевая страница (англ. «landing page» или «посадочная страница») — веб-страница, содержащая информацию об услуге или товаре, переход на которую осуществляется по ссылке из рекламного объявления. Используется для усиления эффективности рекламы, увеличения аудитории. Целевая страница обычно содержит информацию о товаре или услуге. Переход на целевые страницы часто осуществляется из социальных медиа, email-рассылок и рекламных компаний в поисковых системах. Главной задачей таких страниц является конвертация посетителя в покупателя или клиента компании, побуждение к целевому действию. Анализ действий пользователей на целевой странице позволяет маркетологам определить успешность рекламы.</p>
+				</div>
+				<div class="item-right">
+					<p><b>70%</b> увеличение продаж</p>
+				</div>
+			</div>
+			<div class="item">
+				<h4>Автоматизация бизнеса</h4>
+				<div class="item-left">
+					<h3>Разработка CRM</h3>
+					<p>Целевая страница (англ. «landing page» или «посадочная страница») — веб-страница, содержащая информацию об услуге или товаре, переход на которую осуществляется по ссылке из рекламного объявления. Используется для усиления эффективности рекламы, увеличения аудитории. Целевая страница обычно содержит информацию о товаре или услуге.</p>
+					<p>Целевая страница (англ. «landing page» или «посадочная страница») — веб-страница, содержащая информацию об услуге или товаре, переход на которую осуществляется по ссылке из рекламного объявления. Используется для усиления эффективности рекламы, увеличения аудитории. Целевая страница обычно содержит информацию о товаре или услуге.</p>
+				</div>
+				<div class="item-right last2">
+					<img src="img/grafic.png" alt=""/>
+				</div>
+			</div>
+			<div class="item">
+				<div class="item-left">
+					<h2>Разработка мобильных приложений</h2>
+					<p>Целевая страница (англ. «landing page» или «посадочная страница») — веб-страница, содержащая информацию об услуге или товаре, переход на которую осуществляется по ссылке из рекламного объявления. Используется для усиления эффективности рекламы, увеличения аудитории. Целевая страница обычно содержит информацию о товаре или услуге. </p>
+				</div>
+				<!--<div class="item-right last">
+					<img src="img/phone.png" alt=""/>
+				</div>-->
+			</div>
+		</div>
+	</div><div class="clear"></div>
+</div>	
+
+<div class="work">
+	<section class="Collage effect-parent">
+		<ul id="da-thumbs" class="da-thumbs">
+			<li class="effect-3 effect-duration-1">
+				<a href="#">
+					<img src="img/img1.jpg">
+					<div style="display: block; left: 0px; top: -100%; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><p>посмотреть</p></div>
+				</a>
+			</li>
+			<li class="effect-3 effect-duration-1">
+				<a href="#">
+					<img src="img/img2.jpg">
+					<div style="display: block; left: 0px; top: -100%; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><p>посмотреть</p></div>
+				</a>
+			</li>
+			<li class="effect-3 effect-duration-1">
+				<a href="#">
+					<img src="img/img2.jpg">
+					<div style="display: block; left: 0px; top: -100%; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><p>посмотреть</p></div>
+				</a>
+			</li>
+			<li class="effect-3 effect-duration-1">
+				<a href="#">
+					<img src="img/img2.jpg">
+					<div style="display: block; left: 0px; top: -100%; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><p>посмотреть</p></div>
+				</a>
+			</li>
+			<li class="effect-3 effect-duration-1">
+				<a href="#">
+					<img src="img/img2.jpg">
+					<div style="display: block; left: 0px; top: -100%; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><p>посмотреть</p></div>
+				</a>
+			</li>
+			<li class="effect-3 effect-duration-1">
+				<a href="#">
+					<img src="img/img2.jpg">
+					<div style="display: block; left: 0px; top: -100%; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><p>посмотреть</p></div>
+				</a>
+			</li>
+			<li class="effect-3 effect-duration-1">
+				<a href="#">
+					<img src="img/img2.jpg">
+					<div style="display: block; left: 0px; top: -100%; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><p>посмотреть</p></div>
+				</a>
+			</li>
+			<li class="effect-3 effect-duration-1">
+				<a href="#">
+					<img src="img/img2.jpg">
+					<div style="display: block; left: 0px; top: -100%; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><p>посмотреть</p></div>
+				</a>
+			</li>
+			<li class="effect-3 effect-duration-1">
+				<a href="#">
+					<img src="img/img2.jpg">
+					<div style="display: block; left: 0px; top: -100%; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><p>посмотреть</p></div>
+				</a>
+			</li>
+			<li class="effect-3 effect-duration-1">
+				<a href="#">
+					<img src="img/img2.jpg">
+					<div style="display: block; left: 0px; top: -100%; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><p>посмотреть</p></div>
+				</a>
+			</li>
+			<li class="effect-3 effect-duration-1">
+				<a href="#">
+					<img src="img/img3.jpg">
+					<div style="display: block; left: 0px; top: -100%; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><p>посмотреть</p></div>
+				</a>
+			</li>
+			<li class="effect-3 effect-duration-1">
+				<a href="#">
+					<img src="img/img2.jpg">
+					<div style="display: block; left: 0px; top: -100%; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><p>посмотреть</p></div>
+				</a>
+			</li>
+			<li class="effect-3 effect-duration-1">
+				<a href="#">
+					<img src="img/img2.jpg">
+					<div style="display: block; left: 0px; top: -100%; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><p>посмотреть</p></div>
+				</a>
+			</li>
+			<li class="effect-3 effect-duration-1">
+				<a href="#">
+					<img src="img/img4.jpg">
+					<div style="display: block; left: 0px; top: -100%; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><p>посмотреть</p></div>
+				</a>
+			</li>
+			<li class="effect-3 effect-duration-1">
+				<a href="#">
+					<img src="img/img2.jpg">
+					<div style="display: block; left: 0px; top: -100%; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><p>посмотреть</p></div>
+				</a>
+			</li>
+			
+			
+			<li class="effect-3 effect-duration-1">
+				<a href="#">
+					<img src="img/img2.jpg">
+					<div style="display: block; left: 0px; top: -100%; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><p>посмотреть</p></div>
+				</a>
+			</li>
+			<li class="effect-3 effect-duration-1">
+				<a href="#">
+					<img src="img/img2.jpg">
+					<div style="display: block; left: 0px; top: -100%; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><p>посмотреть</p></div>
+				</a>
+			</li>
+			
+			
+			<li class="effect-3 effect-duration-1">
+				<a href="#">
+					<img src="img/img2.jpg">
+					<div style="display: block; left: 0px; top: -100%; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><p>посмотреть</p></div>
+				</a>
+			</li>
+			<li class="effect-3 effect-duration-1">
+				<a href="#">
+					<img src="img/img2.jpg">
+					<div style="display: block; left: 0px; top: -100%; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><p>посмотреть</p></div>
+				</a>
+			</li>
+			<li class="effect-3 effect-duration-1">
+				<a href="#">
+					<img src="img/img5.jpg">
+					<div style="display: block; left: 0px; top: -100%; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><p>посмотреть</p></div>
+				</a>
+			</li>
+			<li class="effect-3 effect-duration-1">
+				<a href="#">
+					<img src="img/img2.jpg">
+					<div style="display: block; left: 0px; top: -100%; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><p>посмотреть</p></div>
+				</a>
+			</li>
+			<li class="effect-3 effect-duration-1">
+				<a href="#">
+					<img src="img/img2.jpg">
+					<div style="display: block; left: 0px; top: -100%; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><p>посмотреть</p></div>
+				</a>
+			</li>
+			<li class="effect-3 effect-duration-1">
+				<a href="#">
+					<img src="img/img2.jpg">
+					<div style="display: block; left: 0px; top: -100%; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><p>посмотреть</p></div>
+				</a>
+			</li>
+			<li class="effect-3 effect-duration-1">
+				<a href="#">
+					<img src="img/img2.jpg">
+					<div style="display: block; left: 0px; top: -100%; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><p>посмотреть</p></div>
+				</a>
+			</li>
+			
+			<li class="effect-3 effect-duration-1">
+				<a href="#">
+					<img src="img/img2.jpg">
+					<div style="display: block; left: 0px; top: -100%; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><p>посмотреть</p></div>
+				</a>
+			</li>
+			<li class="effect-3 effect-duration-1">
+				<a href="#">
+					<img src="img/img6.jpg">
+					<div style="display: block; left: 0px; top: -100%; overflow: hidden; transition: all 300ms ease; -webkit-transition: all 300ms ease;"><p>посмотреть</p></div>
+				</a>
+			</li>
+
+
+			
+		</ul>
+	</section>	
+	<div class="clear"></div>
+</div>
+
+
+<div class="photo">
+	<div class="content">
+		<a href="#"><img src="img/icon1.png" class="icon1" alt=""/></a>
+		<a href="#"><img src="img/icon2.png" alt=""/></a>
+		<a href="#"><img src="img/icon3.png" alt=""/></a>
+		<a href="#"><img src="img/icon4.png" alt=""/></a>
+		
+		<a href="#"><img src="img/icon1.png" alt=""/></a>
+		<a href="#"><img src="img/icon2.png" alt=""/></a>
+		<a href="#"><img src="img/icon3.png" alt=""/></a>
+		<a href="#"><img src="img/icon4.png" alt=""/></a><div class="clear"></div>
+	</div>
+</div>
+
+<div class="fl">
+	<div class="content">
+		<p id="p">Мы на www.fl.ru</p>
+		<button id="button">Посмотреть</button>
+		<div class="clear"></div>
+	</div>
+</div>
+
+<div class="message" id="port">
+	<div class="content">
+		<div class="message-block">
+			<form action="mail/mail.php" method="post" id="call_send">
+				<fieldset>
+					<h1>Написать нам</h1>
+					<div id="txt"></div>
+					<div id="hide">
+						<label>Имя</label><input type="text" name="name" value="" placeholder=""/>
+						<label>E-mail</label><input type="text" name="email" value="" placeholder=""/>
+						<label>Сообщение</label><textarea name="message" rows="" cols=""></textarea>
+						<input type="submit" value="ОТПРАВИТЬ"/>
+					</div>
+				</fieldset>
+			</form>
+		</div><div class="clear"></div>
+	</div>
+</div>
+
+<div class="rewievs">
+	<div class="content">
+		<h1>Отзывы наших клиентов</h1>
+		
+		<div class="list_carousel">
+			<ul id="foo2">
+					<li>
+						<div class="rewievs-block">
+							<img src="img/foto1.png" id="foto1" alt=""/>
+							<h2>Путин Владимир, <h2><b>начальник и всея Руси</b></h2></h2>
+							<p>Отличный исполнитель. Заказывал разработку уникального модуля бонусной программы с отправкой e-mail сообщений для популярной CMS интернет магазинов – Shop Script 5. Все сделано даже раньше оговоренного срока в точности по ТЗ. Доработки были внесены так же быстро. В процессе разработки были предложены варианты оптимизации и улучшения изначального проекта. Спасибо!</p>
+						</div>
+					</li>					
+					<li>
+						<div class="rewievs-block">
+							<img src="img/foto2.png" id="foto2" alt=""/>
+							<h2>Путин Владимир, <h2><b>начальник и всея Руси</b></h2></h2>
+							<p>Отличный исполнитель. Заказывал разработку уникального модуля бонусной программы с отправкой e-mail сообщений для популярной CMS интернет магазинов – Shop Script </p>
+						</div>
+					</li>					
+					<li>
+						<div class="rewievs-block">
+							<img src="img/foto3.png" id="foto3" alt=""/>
+							<h2>Путин Владимир, <h2><b>начальник и всея Руси</b></h2></h2>
+							<p>Отличный исполнитель. Заказывал разработку уникального модуля бонусной программы с отправкой e-mail сообщений для популярной CMS интернет магазинов – Shop Script 5. Все сделано даже раньше оговоренного срока в точности по ТЗ. Доработки были внесены так же быстро.  Спасибо!</p>
+						</div>
+					</li>					
+					<li>
+						<div class="rewievs-block">
+							<img src="img/foto4.png" id="foto4" alt=""/>
+							<h2>Путин Владимир, <h2><b>начальник и всея Руси</b></h2></h2>
+							<p>Отличный исполнитель. Заказывал разработку уникального модуля бонусной программы с отправкой e-mail сообщений для популярной CMS интернет магазинов – Shop Script 5. Все сделано даже раньше оговоренного срока в точности по ТЗ. </p>
+						</div>
+					</li>					
+					<li>
+						<div class="rewievs-block">
+							<img src="img/foto3.png" id="foto5" alt=""/>
+							<h2>Путин Владимир, <h2><b>начальник и всея Руси</b></h2></h2>
+							<p>Отличный исполнитель. Заказывал разработку уникального модуля бонусной программы с отправкой e-mail сообщений для популярной CMS интернет магазинов – Shop Script 5. Все сделано даже раньше оговоренного срока в точности по ТЗ. Доработки были внесены так же быстро.  Спасибо!</p>
+						</div>
+					</li>					
+					<li>
+						<div class="rewievs-block">
+							<img src="img/foto4.png" id="foto6" alt=""/>
+							<h2>Путин Владимир, <h2><b>начальник и всея Руси</b></h2></h2>
+							<p>Отличный исполнитель. Заказывал разработку уникального модуля бонусной программы с отправкой e-mail сообщений для популярной CMS интернет магазинов – Shop Script 5. Все сделано даже раньше оговоренного срока в точности по ТЗ. </p>
+						</div>
+					</li>
+			</ul>	
+			<div class="clearfix"></div>
+			<a id="prev2" class="prev" href="#">&lt;</a>
+			<a id="next2" class="next" href="#">&gt;</a>
+		</div>
+		
+		<div class="clear"></div>
+	</div>
+</div>
+
+<div class="map">	
+	<div id="map"></div>
+</div>
+
+<div class="map-info">
+	<div class="content">
+		<div class="phone">
+			<p>Уссурийск, Тимирязева 29</p>
+			<div class="pp_ph">(4234) <span id="ph_phone">32 53 57</span></div>
+		</div>
+		
+		<div class="contacts">
+			<p>Skype: <b>order2cubes</b></p>
+			<p>E-mail: <u>order@2cubes.ru</u></p>
+			<p><b>+ 7 924 259 0591</b></p>
+			<p><b> + 7 924 430 5840</b></p>
+		</div>
+		
+		<button>ОСТАВИТЬ ЗАЯВКУ</button><div class="clear"></div>
+	</div>
+</div>
+
+<div class="footer">
+	<div class="content">
+		<p>© 2010-2015 2cubes.ru - создание web-сайтов</p>
+		<div class="clear"></div>
+	</div>
+</div>
+
+
+
+</body>
+</html>
+

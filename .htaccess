@@ -1,0 +1,17 @@
+RewriteEngine on
+php_value error_reporting 2039
+Options +FollowSymLinks
+RewriteCond %{HTTP_HOST} ^www\.(.*) [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+AddDefaultCharset utf-8
+AddCharset utf-8 *
+
+
+# if a directory or a file exists, use it directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# otherwise forward it to index.php
+RewriteRule . index.php
+

@@ -1,0 +1,71 @@
+
+/* ------ mobilyslider-----------------------------------------------*/
+
+.slider {
+width:1280px;
+height:639px;
+margin:0 auto;
+position:relative;
+background:none;
+z-index:50;
+}
+
+.sliderContent {
+width:1280px;
+height:639px;
+clear:both;
+position:relative;
+overflow:hidden;
+}
+
+.sliderArrows a {
+display:block;
+text-indent:-9999px;
+outline:none;
+z-index:50;
+width:45px;
+height:75px;
+position:absolute;
+top:50%;
+}
+
+.prev {
+background:url(../img/left.png) no-repeat left;
+left:0;
+}
+
+.prev:hover {background:url(../img/right-hover.png) no-repeat left;}
+
+.next {
+right:0;
+background:url(../img/right.png) no-repeat left;
+}
+
+.next:hover {background:url(../img/left-hover.png) no-repeat left;}
+
+.sliderContent .item {
+width:1280px;
+height:639px;
+position:absolute;
+}
+
+.sliderBullets {
+position:absolute;
+top:12px;
+left:85px;
+z-index:50;
+}
+
+.sliderBullets a {
+display:block;
+float:left;
+text-indent:-9999px;
+outline:none;
+margin-left:5px;
+width:21px;
+height:21px;
+background:url(../img/bullets.png) no-repeat left;
+background-position:0 0;
+}
+
+.sliderBullets .active {background-position:-26px 0;}

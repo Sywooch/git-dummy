@@ -1,0 +1,1806 @@
++font2(MuseoSansCyrl,MuseoSansCyrl-300,300)
++font2(MuseoSansCyrl,MuseoSansCyrl-500,500)
++font2(MuseoSansCyrl,MuseoSansCyrl-700,700)
++font2(MuseoSansCyrl,MuseoSansCyrl-900,900)
+body
+	font-family: MuseoSansCyrl
+	font-weight: 500
+#page
+	width: 100%
+	overflow: hidden
+	position: relative
+.ct
+	max-width: 1170px
+	position: relative
+	margin: auto
+	padding: 0 10px
+	+clr
+	+ms(1186)
+		max-width: 939px
+	+ms(986)
+		max-width: 620px
+	+ms(636)
+		max-width: 592px
+#header
+	height: 82px
+	+box-shadow(0 1px 3px rgba(0, 0, 2, 0.2))
+	position: relative
+	z-index: 10
+	+clr
+	.logo
+		float: left
+		position: relative
+		top: 20px
+		margin-right: 15px
+	.bf1
+		float: left
+		height: 33px
+		top: 24px
+		margin-left: 10px
+		position: relative
+		margin-right: 10px
+		border-left: 1px solid #cfcfcf
+		+ms(636)
+			display: none
+	.modal-ff1
+		position: absolute
+		top: 73px
+		background-color: white
+		+box-shadow(0 0 8px rgba(86, 86, 86, 0.43))
+		+b(5px)
+		display: none
+		font-weight: 300
+		+ms(636)
+			top: 160px
+		&:before
+			position: absolute
+			top: -16px
+			left: 34px
+			display: block
+			content: ''
+			+s(ep-shadow1)
+		.item-st1
+			padding: 14px
+			border-bottom: 1px solid #d8d8d8
+			position: relative
+			&:last-child
+				border: none
+			+clr
+			.ll1
+				float: left
+				margin-right: 13px
+				height: 44px
+				img
+					width: 58px
+					height: 44px
+			.rr1
+				float: right
+				text-align: right
+				+ms(1186)
+					display: none
+				div
+					height: 44px
+					display: table-cell
+					vertical-align: middle
+					font-size: 10px
+					color: #5d5c5a
+					span
+						font-size: 20px
+						display: block
+						line-height: 20px
+			.ov-tit1
+				font-size: 14px
+				line-height: 18px
+				color: #5d5c5a
+				text-align: left
+				span
+					height: 44px
+					display: table-cell
+					vertical-align: middle
+				i
+					color: #2dc16b
+					font-style: normal
+			a
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				display: block
+			&:hover
+				.ov-tit1
+					color: #2dc16b
+	.search1
+		position: relative
+		top: 24px
+		overflow: hidden
+		+b(4px)
+		.ov-search1
+			position: relative
+			margin-right: 3px
+			height: 33px
+			background-color: white
+			padding-left: 40px
+			div
+				margin-right: 10px
+				input[type=text]
+					height: 33px
+					line-height: 33px
+					background: none
+					border: none
+					width: 100%
+					display: block
+					color: #5d5c5a
+					font-family: MuseoSansCyrl
+					font-size: 12px
+					+ms(376)
+						font-size: 11px
+			input[type=submit]
+				position: absolute
+				top: 8px
+				left: 8px
+				display: block
+				+s(search1)
+				border: none
+			&.act1
+				&:before
+					position: absolute
+					top: 0
+					left: 0
+					width: 40px
+					bottom: 0
+					display: block
+					content: ''
+					background: url(../img/load.gif) center no-repeat #fff
+					z-index: 10
+		&:hover
+			+box-shadow(0 0 8px rgba(86, 86, 86, 0.43))
+		&.active
+			+box-shadow(0 0 8px rgba(86, 86, 86, 0.43))
+		+ms(986)
+			width: 1px
+			float: left
+			position: relative
+			overflow: visible
+			.poss-mob1
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				width: 32px
+				overflow: hidden
+			.bt-mob1
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				width: 33px
+				height: 33px
+			&.active2
+				.poss-mob1
+					width: 190px
+					+box-shadow(0 0 8px rgba(86, 86, 86, 0.43))
+					z-index: 23
+					background: #fff
+		+ms(636)
+			width: auto
+			float: none
+			position: static
+			top: 0
+			overflow: hidden
+			.bt-mob1
+				display: none !important
+			.poss-mob1
+				width: auto !important
+				position: static
+			.ov-search1
+				padding-left: 42px
+	.ac1
+		float: right
+		height: 32px
+		top: 25px
+		position: relative
+		margin: 0 10px 0 20px
+		&:before
+			position: absolute
+			top: 0
+			left: -10px
+			display: block
+			content: ''
+			bottom: 0
+			border-left: 1px solid #cfcfcf
+			+ms(986)
+				z-index: 10
+			+ms(636)
+				display: none !important
+		&:after
+			position: absolute
+			top: 0
+			right: -10px
+			display: block
+			content: ''
+			bottom: 0
+			border-left: 1px solid #cfcfcf
+		.curr1
+			color: #616161
+			font-family: MuseoSansCyrl
+			text-transform: uppercase
+			font-size: 12px
+			line-height: 32px
+			padding-left: 32px
+			position: relative
+			padding: 0 25px 0 45px
+			+b(4px 4px 0 0)
+			cursor: pointer
+			height: 32px
+			span
+				font-size: 10px
+				color: #2dc16b
+				display: inline-block
+				vertical-align: top
+				position: relative
+				top: -3px
+			div
+				position: absolute
+				top: 0
+				right: 0
+				width: 0
+				height: 0
+				&:after
+					top: 14px
+					right: 10px
+					+s(i8)
+					display: block
+					content: ''
+					position: absolute
+			&:before
+				position: absolute
+				top: 7px
+				left: 13px
+				display: block
+				content: ''
+				+s(i7)
+				z-index: 21
+			&.j1
+				&:after
+					top: 17px
+					left: 22px
+					display: block
+					content: ''
+					position: absolute
+					+s(r1)
+					z-index: 21
+			&.j2
+				&:after
+					top: 17px
+					left: 22px
+					display: block
+					content: ''
+					position: absolute
+					+s(r2)
+					z-index: 21
+			&.j3
+				&:after
+					top: 17px
+					left: 22px
+					display: block
+					content: ''
+					position: absolute
+					+s(r3)
+					z-index: 21
+			&.j4
+				&:after
+					top: 17px
+					left: 22px
+					display: block
+					content: ''
+					position: absolute
+					+s(r4)
+					z-index: 21
+		ul
+			position: absolute
+			top: 32px
+			left: 0
+			right: 0
+			background: #fff
+			+box-shadow(0 0 8px rgba(86, 86, 86, 0.43))
+			+b(0 0 4px 4px)
+			display: none
+			padding: 10px 0 4px 4px
+			&:before
+				position: absolute
+				top: -9px
+				left: 0
+				right: 0
+				height: 9px
+				background: #fff
+				display: block
+				cursor: pointer
+				content: ''
+			li
+				display: block
+				a
+					display: block
+					position: relative
+					height: 30px
+					padding-left: 42px
+					color: #616161
+					font-family: MuseoSansCyrl
+					font-size: 11px
+					line-height: 30px
+					text-transform: uppercase
+					&:hover
+						color: #2dc16b
+					span
+						position: absolute
+						top: 0
+						left: -2px
+						width: 43px
+						height: 30px
+						display: block
+						span
+							display: table-cell
+							position: static
+							text-align: center
+							vertical-align: middle
+							&:before
+								display: inline-block
+								vertical-align: middle
+								content: ''
+					@each $s in 1,2,3,4,5
+						&.j#{$s}
+							span
+								span
+									&:before
+										+s(d#{$s})
+							&:hover
+								span
+									span
+										&:before
+											+s(d#{$s}#{$s})
+		&.active
+			.curr1
+				+box-shadow(0 0 8px rgba(86, 86, 86, 0.43))
+			ul
+				display: block
+	.lang1
+		float: right
+		width: 90px
+		top: 25px
+		position: relative
+		height: 32px !important
+		margin-left: 10px
+		.curr1
+			position: relative
+			height: 42px
+			width: 90px
+			text-indent: 41px
+			color: #616161
+			font-family: MuseoSansCyrl
+			font-size: 12px
+			line-height: 32px
+			font-weight: 500 !important
+			text-transform: uppercase
+			cursor: pointer
+			+ms(636)
+				font-weight: 500 !important
+			&:before
+				position: absolute
+				top: 8px
+				left: 9px
+				display: block
+				content: ''
+				+s(i5)
+				z-index: 10
+			&:after
+				top: 14px
+				right: 9px
+				display: block
+				content: ''
+				position: absolute
+				+s(i6)
+			+b(4px 4px 0 0)
+		&.active
+			.curr1
+				+box-shadow(0 0 8px rgba(86, 86, 86, 0.23))
+				&:before
+					+s(i55)
+			ul
+				display: block
+		ul
+			position: absolute
+			top: 40px
+			left: 0
+			width: 110px
+			padding: 7px 0 2px 0
+			+b(0 4px 4px 4px)
+			background: #fff
+			display: none
+			&:before
+				position: absolute
+				top: -9px
+				left: 0
+				width: 90px
+				height: 9px
+				cursor: pointer
+				background: #fff
+				display: block
+				content: ''
+			+box-shadow(0 0 8px rgba(86, 86, 86, 0.23))
+			a
+				height: 30px
+				display: block
+				padding: 0 0 0 42px
+				position: relative
+				line-height: 30px
+				color: #616161
+				font-family: MuseoSansCyrl
+				font-size: 11px
+				text-transform: uppercase
+				&:before
+					position: absolute
+					top: 8px
+					left: 14px
+					display: block
+					content: ''
+				&:hover
+					color: #2dc16b
+				@each $s in 1,2,3
+					&.j#{$s}
+						&:before
+							+s(l#{$s})
+		+ms(1217)
+			.curr1
+				+b(4px 4px 0 0)
+				&:before
+					left: 6px
+				&:after
+					right: 6px
+			ul
+				right: 0
+				left: auto
+				+b(4px 0 4px 4px)
+				&:before
+					left: auto
+					right: 0
+					width: 90px
+		+ms(986)
+			width: 80px
+			.curr1
+				width: 80px
+				text-indent: 31px
+				height: 42px
+			ul
+				left: auto
+				right: 0px
+				&:before
+					width: 80px
+	.main-menu
+		width: 60px
+		position: relative
+		top: 16px
+		height: 47px
+		float: left
+		+b(4px 4px 0 0)
+		.curr1
+			top: 16px
+			cursor: pointer
+			left: 16px
+			display: block
+			position: absolute
+			+s(i1)
+		+ms(986)
+			margin-left: -10px
+			width: 50px
+			.curr1
+				left: 11px
+		&.active
+			+box-shadow(0 0 8px rgba(86, 86, 86, 0.23))
+			z-index: 30
+			.curr1
+				+s(i2)
+			ul
+				display: block
+				ul
+					display: none
+		ul
+			display: none
+			position: absolute
+			top: 47px
+			left: 0
+			+b(0 4px 4px 4px)
+			padding: 5px 0
+			+box-shadow(0 0 8px rgba(86, 86, 86, 0.23))
+			background: #fff
+			&:before
+				position: absolute
+				top: -8px
+				left: 0
+				width: 60px
+				background: #fff
+				display: block
+				content: ''
+				height: 8px
+				+ms(986)
+					width: 50px
+			li
+				display: block
+				position: relative
+				a
+					height: 27px
+					color: #616161
+					display: block
+					padding-left: 16px
+					padding-right: 30px + 16px
+					&:before
+						position: absolute
+						top: 8px
+						right: 0 + 16px
+						display: block
+						content: ''
+						+s(i3)
+					position: relative
+					font-size: 11px
+					line-height: 27px
+					font-weight: 300
+					text-transform: uppercase
+				&:hover
+					a
+						color: #2dc16b
+						&:before
+							+s(i4)
+					ul
+						display: block
+						li
+							a
+								color: #616161
+								padding-right: 15px
+								&:before
+									display: none
+								&:hover
+									color: #2dc16b
+				ul
+					position: absolute
+					top: -5px
+					left: 100%
+					display: none
+					+b(0 4px 4px 0)
+					border-left: 2px solid rgba(0,0,0,0.1)
+					&:before
+						display: none
+					&:after
+						position: absolute
+						top: 0
+						left: -9px
+						width: 8px
+						bottom: 0
+						display: block
+						content: ''
+	.ln1
+		border-bottom: 1px solid #cfcfcf
+		display: none
+	.bf2
+		width: 1px
+		margin: auto
+		height: 32px
+		background-color: #cfcfcf
+		display: inline-block
+		vertical-align: top
+		display: none
+		margin-bottom: 4px
+	+ms(986)
+		.ac1
+			margin: 0
+			margin-right: 9px
+	+ms(636)
+		height: auto
+		padding: 15px 0 4px 0
+		text-align: center
+		.logo
+			display: block
+			margin: auto
+			margin-bottom: 20px
+			top: 0
+			width: 175px
+			left: 20px
+			height: 38px
+			float: none
+			+ms(320)
+				position: relative
+				top: 0
+				+ms(300)
+					left: 20px
+		.ln1
+			display: block
+			clear: both
+			width: 100%
+			padding: 0 10px
+			position: relative
+			left: -10px
+			margin-bottom: 5px
+		.main-menu
+			position: absolute
+			top: 0px
+			left: 26px - 10px
+			text-align: left
+			float: none
+			display: block
+			z-index: 30
+		.lang1
+			float: right
+			width: 40%
+			top: 0
+			margin: 0
+			text-align: left
+			z-index: 15
+			.curr1
+				left: 50%
+				margin-left: -45px
+			ul
+				left: 50%
+				margin-left: -45px
+				&:before
+					left: 0
+					right: auto
+				+b(0 4px 4px 4px)
+			margin-bottom: 4px
+		.ac1
+			width: auto
+			top: 0
+			float: left
+			margin: 0
+			text-align: left
+			z-index: 15
+			.curr1
+				left: -2px
+				width: auto
+			ul
+				right: 2px
+				left: -2px
+			&:after
+				display: none !important
+		.bf2
+			display: inline-block
+			position: relative
+			left: 5%
+	+ms(376)
+		.bf2
+			display: inline-block
+			position: relative
+			left: -1px
+		.ac1
+			width: auto
+			&:before,&:after
+				display: none
+			margin: 0
+			float: left
+			.curr1
+				font-size: 11px
+				padding-right: 14px
+				div
+					&:after
+						right: 5px
+			ul
+				width: auto
+				margin-left: 0
+				left: -2px
+				right: 2px
+		.lang1
+			margin: 0
+			width: auto
+			width: 75px
+			.curr1
+				+b(4px 4px 0 0)
+				left: 0
+				margin-left: 0
+				text-indent: 30px
+				width: 75px
+				font-size: 11px
+				font-weight: 500
+				&:before
+					left: 6px
+				&:after
+					right: 6px
+			ul
+				margin-left: 0
+				left: auto
+				right: 0
+				+b(4px 0 4px 4px)
+				&:before
+					left: auto
+					right: 0
+					width: 75px
+.navigation
+	position: relative
+	height: 0
+	z-index: 2
+	+ms(610)
+		padding: 0 9px
+	&:before
+		position: absolute
+		top: 0
+		left: 0
+		height: 86px
+		display: block
+		content: ''
+		+op(0.5)
+		right: 0
+		background: #fff
+	.bt-ct1
+		@extend .ct
+		div
+			display: table-cell
+			height: 86px
+			vertical-align: middle
+			width: 90%
+		li
+			position: relative
+			display: inline
+			&+li
+				padding-left: 12px
+				&:before
+					content: '>'
+					color: #5d5c5a
+					position: absolute
+					top: 0
+					left: 3px
+					display: block
+			color: #ff5252
+			font-family: MuseoSansCyrl
+			font-size: 12px
+			a
+				color: #5d5c5a
+				text-decoration: underline
+				&:hover
+					text-decoration: none
+.sld1
+	min-height: 270px
+	.fl1
+		height: 0
+		overflow: hidden
+		ul.slides
+			li
+				overflow: hidden
+				img
+					display: block
+					margin: auto
+					max-width: 100%
+					height: auto
+					min-height: 590px
+				div
+					width: 2000px
+					left: 50%
+					margin-left: -1000px
+					position: relative
+				+ms(700)
+					img
+						height: 347px
+						width: auto
+						min-height: 0
+		.flex-prev,.flex-next
+			display: none
+		&.active
+			overflow: visible
+			height: auto
+.fl2
+	height: 0
+	overflow: hidden
+	&.active
+		overflow: visible
+		height: auto
+.sld-nav-sld1
+	@extend .ct
+	margin-top: -212px
+	padding-bottom: 18px
+	+ms(700)
+		margin-top: -80px
+	.fl2
+		width: 107px * 10
+		+ms(1186)
+			width: 107px * 7
+		+ms(1068)
+			width: 107px * 7
+		+ms(986)
+			width: 107px * 5
+		+ms(866)
+			width: 107px * 5
+		+ms(745)
+			width: 107px * 4
+		+ms(638)
+			width: 107px * 3
+		+ms(554)
+			width: 107px * 2
+		+ms(425)
+			width: 107px * 2
+		margin: auto
+		position: relative
+		.flex-prev,.flex-next
+			display: none
+		.fr1
+			position: absolute
+			top: 19px
+			left: -45px
+			display: block
+			cursor: pointer
+			overflow: hidden
+			text-indent: 999px
+			+s(p1)
+			&:hover
+				+s(p11)
+		.fr2
+			position: absolute
+			top: 19px
+			right: -45px
+			display: block
+			cursor: pointer
+			overflow: hidden
+			text-indent: 999px
+			+s(n1)
+			&:hover
+				+s(n11)
+		ul.slides
+			div
+				position: relative
+				+b(3px)
+				width: 90px
+				cursor: pointer
+				margin: auto
+				img
+					width: 90px
+					+b(3px)
+					height: 57px
+				&:before
+					position: absolute
+					top: 0
+					left: 0
+					right: 0
+					+b(3px)
+					bottom: 0
+					display: block
+					content: ''
+			li.flex-active-slide
+				div
+					&:before
+						border: 2px solid #2dc16b
+.sz1
+	background-color: #f9f9f9
+	+b(4px)
+	+box-shadow(0 1px 2px rgba(0, 1, 2, 0.23))
+	margin: auto
+	margin-bottom: 60px
+	position: relative
+	max-width: 1170px
+	+ms(1186)
+		max-width: 939px
+		margin: auto
+		margin-bottom: 60px
+	+ms(986)
+		margin: 0 0 60px 0
+	+clr
+	.rr1
+		overflow: hidden
+		padding: 25px 37px 0 30px
+		position: relative
+		width: 350px - 55px
+		float: right
+		+ms(825)
+			width: 300px - 55px
+		&:before
+			left: 0px
+			top: 0
+			bottom: 0
+			display: block
+			content: ''
+			border-left: 1px solid #cfcfcf
+			position: absolute
+		.tit1
+			padding: 25px 0 22px 0
+			position: relative
+			color: #5d5c5a
+			font-family: MuseoSansCyrl
+			font-size: 24px
+			line-height: 24px
+			margin-right: 100px
+			display: none
+			+ms(550)
+				font-size: 18px
+			&:before
+				position: absolute
+				top: 26px
+				left: 20px
+				display: block
+				content: ''
+			&.j1
+				padding-left: 30px
+				&:before
+					+s(t1)
+			span
+				display: inline-block
+				vertical-align: top
+				position: relative
+				width: 0
+				height: 0
+				line-height: 0px
+				&:before
+					position: absolute
+					top: 1px
+					left: 5px
+					display: block
+					content: ''
+				@each $s in 1,2,3
+					&.j#{$s}
+						&:before
+							+s(ep#{$s})
+		.rt1
+			float: right
+			a
+				display: block
+				margin-bottom: 15px
+				color: white
+				font-family: MuseoSansCyrl
+				font-size: 14px
+				line-height: 72px
+				text-transform: uppercase
+				text-align: center
+				line-height: 45px
+				width: 132px
+				height: 45px
+				background-color: #2dc16b
+				+b(4px)
+				&:hover
+					background: #ff5252
+			p
+				color: #7d7d7d
+				font-family: MuseoSansCyrl
+				font-size: 11px
+				line-height: 18px
+		.ov-t1
+			.item1
+				padding-bottom: 23px
+				color: #7d7d7d
+				font-family: MuseoSansCyrl
+				font-size: 11px
+				line-height: 11px
+				font-weight: 300
+				span
+					display: block
+					color: #5d5c5a
+					font-size: 22px
+					font-weight: bold
+					line-height: 22px
+					padding-bottom: 5px
+			.t1
+				color: #5d5c5a
+				font-size: 11px
+				font-weight: bold
+				text-transform: uppercase
+				display: block
+				padding-bottom: 1px
+			p
+				color: #878787
+				font-weight: 300
+				padding-bottom: 2px
+				font-size: 11px
+				a
+					text-decoration: underline
+					color: #878787
+					&:hover
+						text-decoration: none
+	.ll1
+		overflow: hidden
+		padding-bottom: 15px
+		.tit1
+			padding: 25px 0 22px 50px
+			position: relative
+			color: #5d5c5a
+			font-family: MuseoSansCyrl
+			font-size: 24px
+			line-height: 24px
+			margin-right: 100px
+			&:before
+				position: absolute
+				top: 26px
+				left: 20px
+				display: block
+				content: ''
+			&.j1
+				&:before
+					+s(t1)
+			span
+				display: inline-block
+				vertical-align: top
+				position: relative
+				width: 0
+				height: 0
+				line-height: 0px
+				&:before
+					position: absolute
+					top: 1px
+					left: 5px
+					display: block
+					content: ''
+				@each $s in 1,2,3
+					&.j#{$s}
+						&:before
+							+s(ep#{$s})
+		.content1
+			margin: 0 19px
+			height: 0
+			position: relative
+			&:before
+				position: absolute
+				bottom: 0
+				left: 0
+				right: 25px
+				height: 30px
+				display: block
+				content: ''
+				+g(rgba(255,255,255,0),#f9f9f9)
+				z-index: 10
+			.sz2
+				padding-bottom: 22px
+				+clr
+				li
+					width: 50%
+					float: left
+					li
+						width: auto
+						padding-right: 20px
+						color: #5d5c5a
+						font-family: MuseoSansCyrl
+						font-size: 14px
+						font-weight: 300
+						line-height: 24px
+						float: none
+						display: block
+			p
+				color: #7d7d7d
+				font-family: MuseoSansCyrl
+				font-size: 14px
+				line-height: 18px
+				padding-bottom: 15px
+				font-weight: 300
+			.mCSB_scrollTools
+				+op(1)
+				width: 20px
+				div
+					+op(1)
+				.mCSB_buttonUp
+					display: block
+					+s(p2)
+					margin-bottom: 4px !important
+					&:hover
+						+s(n2)
+				.mCSB_buttonDown
+					display: block
+					+s(p22)
+					position: absolute !important
+					top: auto !important
+					bottom: 0 !important
+					&:hover
+						+s(n22)
+				.mCSB_draggerRail
+					width: 2px !important
+					background-color: #cfcfcf !important
+				.mCSB_dragger
+					div
+						+op(0)
+					width: 14px
+					left: 3px
+					background-color: #cfcfcf
+					+b(4px)
+					&.mCSB_dragger_onDrag
+						background: #2dc16b
+	+ms(986)
+		max-width: 620px
+		margin: auto
+		margin-bottom: 60px
+		.ll1
+			overflow: visible
+			.tit1
+				display: none
+			padding: 10px 20px
+			.content1
+				margin: 0
+				height: 200px !important
+				+ms(480)
+					li
+						float: none !important
+						width: auto !important
+		.rr1
+			float: none
+			min-height: 0 !important
+			width: auto
+			overflow: visible
+			padding: 0 20px 10px 20px
+			border-bottom: 1px solid #cfcfcf
+			.tit1
+				display: block
+				padding-left: 30px
+				&:before
+					position: absolute
+					left: 4px
+			&:before
+				display: none
+			.ov-t1
+				.item1
+					display: inline-block
+					vertical-align: top
+					float: none
+					&+.item1
+						margin-left: 30px
+					+ms(481)
+						display: block
+						margin: 0 !important
+						padding-bottom: 10px
+				+ms(481)
+					.t1
+						padding-top: 10px
+			.rt1
+				margin-left: 10px
+#content
+	@extend .ct
+	padding-bottom: 55px
+	+ms(610)
+		padding-left: 20px
+		padding-right: 20px
+	h1
+		color: #7d7d7d
+		font-family: MuseoSansCyrl
+		font-size: 24px
+		line-height: 24px
+		font-weight: 500
+		margin-bottom: 17px
+		+ms(986)
+			text-align: center
+			margin-bottom: 25px
+	.post1
+		margin-bottom: 33px
+		+clr
+		.ft-img1
+			float: left
+			min-width: 300px
+			position: relative
+			margin-right: 68px
+			&:before
+				position: absolute
+				bottom: 0
+				left: 50%
+				width: 330px
+				margin-left: -165px
+				height: 16px
+				display: block
+				content: ''
+				background: url(../img/bl1.png)
+			img
+				max-width: 100%
+				width: auto
+				height: auto
+				display: block
+				margin: auto
+		&.post11
+			.ft-img1
+				float: right
+				margin: 0 0 0 68px
+		.ov-t2
+			overflow: hidden
+			div
+				display: table-cell
+				vertical-align: middle
+				h2
+					color: black
+					line-height: 24px
+					font-weight: 300
+					padding-bottom: 4px
+					display: block
+				p
+					color: #7d7d7d
+					line-height: 24px
+					font-size: 14px
+					font-weight: 300
+		+ms(986)
+			.ft-img1
+				float: none !important
+				margin: 0 !important
+			.ov-t2
+				padding-top: 20px
+				text-align: center
+				div
+					height: auto !important
+			margin-bottom: 20px
+	.hh1
+		height: 80px
+	.title1
+		color: #5d5c5a
+		font-family: MuseoSansCyrl
+		font-size: 24px
+		line-height: 24px
+		padding-bottom: 40px
+		+ms(986)
+			text-align: center
+	.sld3
+		position: relative
+		padding-bottom: 75px
+		+ms(600)
+			width: 270px
+			margin: auto
+		.owl1
+			position: relative
+			left: -1.5%
+			width: 103%
+		.pv1
+			position: absolute
+			top: -66px
+			right: 57px
+			cursor: pointer
+			+s(p33)
+			&:hover
+				+s(p3)
+		.nv1
+			position: absolute
+			top: -66px
+			right: 0
+			cursor: pointer
+			+s(n33)
+			&:hover
+				+s(n3)
+		+ms(986)
+			.pv1
+				top: 140px
+				left: 19px
+				z-index: 10
+			.nv1
+				top: 140px
+				right: 19px
+				z-index: 10
+		.item
+			padding: 2px
+		.prod1
+			width: 270px
+			margin: auto
+			position: relative
+			height: 300px
+			background-color: #f9f9f9
+			+b(4px)
+			overflow: hidden
+			+box-shadow(0 0 3px rgba(0, 1, 2, 0.33))
+			.ft-img-s1
+				height: 236px
+				overflow: hidden
+				div
+					height: 236px
+					width: 1200px
+					left: 50%
+					margin-left: -600px
+					text-align: center
+					position: relative
+					img
+						display: block
+						margin: auto
+			.tit1
+				width: 270px
+				height: 64px
+				display: table-cell
+				vertical-align: middle
+				text-align: center
+				color: #5d5c5a
+				font-family: MuseoSansCyrl
+				font-size: 18px
+				line-height: 18px
+			a
+				display: block
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+			&:hover
+				text-decoration: underline
+	.post2
+		background: #f9f9f9
+		border: 1px solid #e5e5e5
+		margin-bottom: 38px
+		+clr
+		.rr1
+			overflow: hidden
+			background-color: white
+			border-left: 1px solid #e6e6e6
+			+b(4px)
+			height: 152px
+			.item1
+				width: 33.3%
+				float: left
+				text-align: center
+				.dc
+					display: inline-block
+					vertical-align: top
+					.dc1
+						height: 152px
+						display: table-cell
+						text-align: center
+						vertical-align: middle
+						color: #5d5c5a
+						font-family: MuseoSansCyrl
+						font-size: 14px
+						line-height: 18px
+						.prc1
+							font-size: 13px
+							line-height: 13px
+							font-weight: 300
+							color: #7d7d7d
+							span
+								font-size: 35px
+								line-height: 35px
+								color: #ff5252
+								font-weight: 500
+								display: block
+								padding-bottom: 5px
+			+ms(986)
+				.item1
+					width: 50%
+					float: left
+					&+.item1
+						float: left
+						width: 50%
+						position: relative
+						top: 5px
+						.dc1
+							height: 76px
+						&+.item1
+							top: -15px
+		.ll1
+			padding: 20px 0
+			float: left
+			width: 50%
+			p
+				color: #7d7d7d
+				font-family: MuseoSansCyrl
+				font-size: 11px
+				line-height: 14px
+				padding: 0 20px
+			div
+				display: table-cell
+				height: 93px
+				vertical-align: middle
+				text-align: center
+				p
+					color: #7d7d7d
+					font-family: MuseoSansCyrl
+					font-size: 14px
+					line-height: 18px
+					padding: 0 !important
+					position: relative
+					margin: 0 53px 0 66px
+					display: inline-block
+					+ms(484)
+						margin: 0 33px 0 46px
+					&:before
+						display: block
+						position: absolute
+						left: -23px
+						content: ''
+						+s(ct1)
+						top: -7px
+					&:after
+						display: block
+						position: absolute
+						right: -23px
+						content: ''
+						+s(ct2)
+						bottom: -7px
+					span
+						width: 0
+						height: 0
+						display: inline-block
+						position: relative
+						vertical-align: top
+						&:after
+							display: block
+							position: absolute
+							right: -33px
+							content: ''
+							+s(ct2)
+							top: 7px
+		+ms(877)
+			.ll1
+				width: 50%
+				padding-left: 0
+				padding-right: 0
+			.rr1
+				width: 50%
+				border: none
+				position: relative
+				&:before
+					position: absolute
+					top: 0
+					left: 0
+					bottom: 0
+					display: block
+					content: ''
+					border-left: 1px solid #e6e6e6
+		+ms(667)
+			.ll1
+				width: auto
+				float: none
+			.rr1
+				width: auto
+				float: none
+				border: none
+				border-top: 1px solid #e6e6e6
+	.lnk1
+		text-align: center
+		padding-bottom: 20px
+		a
+			display: inline-block
+			padding-left: 32px
+			line-height: 22px
+			color: #7d7d7d
+			font-family: MuseoSansCyrl
+			font-size: 12px
+			text-decoration: underline
+			position: relative
+			&:before
+				position: absolute
+				top: 0
+				left: 0
+				display: block
+				content: ''
+				+s(more1)
+			&:hover
+				text-decoration: none
+#footer
+	background: #323a45
+	.pd-foot
+		height: 94px
+		background-color: #2d353f
+		+ms(610)
+			padding: 0 10px
+		.ll1
+			float: left
+			padding-top: 23px
+			a
+				display: inline-block
+				vertical-align: top
+			span
+				display: block
+				color: #e9e9ea
+				font-weight: 300
+				padding-top: 10px
+				font-family: MuseoSansCyrl
+				font-size: 12px
+				line-height: 12px
+		.rr1
+			line-height: 94px
+			float: right
+			color: #e9e9ea
+			font-family: MuseoSansCyrl
+			font-size: 12px
+			span
+				display: inline-block
+				margin-right: 24px
+				vertical-align: middle
+			img
+				display: inline-block
+				vertical-align: middle
+			+ms(436)
+				line-height: 12px
+				span
+					display: block
+					line-height: 12px
+					padding-top: 23px
+					padding-bottom: 9px
+			.df2
+				display: none
+			+ms(330)
+				.df2
+					display: block
+				.df1
+					display: none
+	.ct-foot
+		@extend .ct
+		padding-top: 37px
+		padding-bottom: 25px
+		+ms(610)
+			padding-left: 20px
+			padding-right: 20px
+		.foot-menu
+			text-align: justify
+			display: block
+			position: relative
+			+ms(593)
+				min-height: 128px
+			li
+				display: inline-block
+				vertical-align: top
+				&.hd-bl-sp1,.hide1
+					display: none
+				+ms(986)
+					&.sp-list4
+						display: none
+					&.hd-bl-sp1
+						display: block
+					&.hide1.hide2
+						display: block
+				+ms(636)
+					float: none
+					display: block
+					ul
+						padding-bottom: 10px
+						li
+							display: none
+							&:first-child
+								display: block
+							&.hd-bl-sp1
+								display: none !important
+							&.nt1
+								display: block
+					&.sp-list5
+						position: absolute
+						top: 0
+						right: 0
+						display: block
+						float: none
+						li
+							position: static !important
+							display: block
+				&.help
+					visibility: hidden
+					width: 100%
+					height: 0
+				li
+					display: block
+					color: white
+					font-family: MuseoSansCyrl
+					font-size: 14px
+					line-height: 24px
+					font-weight: 300
+					a
+						color: #fff
+						&:hover
+							color: #2dc16b
+						&:active
+							color: #ff5252
+						&.j1,&.j2,&.j3,&.j4
+							display: inline-block
+							padding-left: 29px
+							height: 24px
+							line-height: 24px
+							position: relative
+							span
+								position: absolute
+								top: 0
+								left: 0
+								display: block
+								width: 29px
+								height: 24px
+								span
+									display: table-cell
+									position: static
+									text-align: center
+									vertical-align: middle
+									&:before
+										display: inline-block
+										vertical-align: middle
+										content: ''
+						@each $s in 1,2,3,4
+							&.j#{$s}
+								span
+									span
+										&:before
+											+s(c#{$s})
+								&:hover
+									span
+										span
+											&:before
+												+s(c#{$s}#{$s})
+								&:active
+									span
+										span
+											&:before
+												+s(c#{$s}#{$s}#{$s})
+					&:first-child
+						color: white
+						font-family: MuseoSansCyrl
+						font-size: 14px
+						line-height: 14px
+						font-weight: bold
+						height: 14px
+						padding-bottom: 12px
+.modal
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	z-index: 100
+	padding: 10px
+	overflow: auto
+	display: none
+	.modal-tb
+		display: table-cell
+		vertical-align: middle
+		.bg-modal
+			position: fixed
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			background: #333
+			+op(0.5)
+		.modal-con
+			position: relative
+			background-color: #f9f9f9
+			+b(4px)
+			max-width: 771px
+			+box-shadow(0 0 10px rgba(0, 0, 0, 0.2))
+			margin: auto
+			padding: 34px 0
+			.close
+				position: absolute
+				top: 11px
+				right: 11px
+				cursor: pointer
+				+s(close)
+			.bt-rr1
+				+clr
+				margin: 0 34px
+				text-align: right
+				font-size: 0.01px
+				span
+					line-height: 32px
+					color: #616161
+					font-family: MuseoSansCyrl
+					font-size: 15px
+					display: inline-block
+					font-weight: 300
+					vertical-align: top
+					margin-right: 12px
+				input[type=text]
+					display: inline-block
+					margin-right: 18px
+					width: 140px - 22px
+					vertical-align: top
+					padding: 0 11px
+					height: 28px
+					background-color: white
+					border: 2px solid #a6a6a6
+					+b(4px)
+					color: #939393
+					font-family: MuseoSansCyrl
+					font-size: 14px
+					&.active
+						color: #616161
+						border-color: #2dc16b
+				input[type=submit]
+					color: white
+					font-family: MuseoSansCyrl
+					font-size: 14px
+					text-transform: uppercase
+					border: none
+					display: inline-block
+					vertical-align: top
+					width: 220px
+					height: 32px
+					background-color: #2dc16b
+					+b(4px)
+					&:hover
+						background: #ff5252
+				+ms(580)
+					width: 230px
+					margin: auto
+					text-align: left
+					span
+						float: left
+						margin: 0
+					input[type=text]
+						float: right
+						width: 110px - 14px
+						padding: 0 7px
+						margin: 0
+						margin-bottom: 12px
+					input[type=submit]
+						clear: both
+						width: 230px
+			.ov-rd1
+				padding-bottom: 1px
+				margin: 0 34px
+				.item1
+					height: 143px
+					margin-bottom: 17px
+					cursor: pointer
+					padding-right: 15px
+					display: block
+					padding-left: 23px
+					overflow: hidden
+					position: relative
+					label
+						position: absolute
+						top: 0
+						left: 0
+						right: 0
+						bottom: 0
+						display: block
+						cursor: pointer
+					&:before
+						position: absolute
+						top: 10px
+						left: 10px
+						right: 10px
+						content: ''
+						bottom: 10px
+						border: 2px solid #d9dbda
+						+b(4px)
+					&.active
+						&:before
+							border-color: #2dc16b
+							top: 0
+							right: 0
+							bottom: 0
+							left: 0
+					.jq-radio
+						position: absolute !important
+						top: 59px
+						left: 20px
+						display: block
+						cursor: pointer
+						+s(rd1)
+					.jq-radio.checked
+						+s(rd2)
+					.st-img1
+						width: 100px
+						margin: 0 49px
+						float: left
+						span
+							display: table-cell
+							height: 141px
+							vertical-align: middle
+							width: 100px
+					&:last-child
+						.st-img1
+							span
+								top: 28px
+					.st-text1
+						display: table-cell
+						vertical-align: middle
+						height: 141px
+						p
+							color: #616161
+							font-size: 14px
+							font-weight: 300
+							a
+								color: #2dc16b
+								text-decoration: underline
+								position: relative
+								z-index: 102
+								&:hover
+									text-decoration: none
+						span
+							display: block
+							color: #5d5c5a
+							font-weight: 300
+							font-size: 23px
+					+ms(580)
+						height: auto
+						padding-left: 0px
+						.jq-radio
+							left: 41px
+						.st-img1
+							float: none
+							width: auto
+							margin: 0
+							display: block
+							padding: 22px 0
+							padding-left: 57px
+							span
+								height: auto
+								width: auto
+								display: block
+								text-align: center
+								img
+									display: block
+									margin: auto
+						.st-text1
+							height: auto
+							padding: 0 20px 20px 20px
+							text-align: center

@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /xml/
+Disallow: /js/
+Disallow: /img/
+Disallow: /swf/
+Disallow: /templates/
+Disallow: /cgi-bin/

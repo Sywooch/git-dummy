@@ -1,0 +1,5 @@
+{
+    "require": {
+        "jisoft/yii2-sypexgeo": "*"
+    }
+}

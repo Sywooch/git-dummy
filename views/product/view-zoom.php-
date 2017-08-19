@@ -1,0 +1,309 @@
+<?php
+use yii\helpers\Html;
+?>
+ <?php
+     $images = app\modules\system\models\Pictures::getImagesSlider('catalog',$data->catalog_id); ?>
+
+
+<div class="page_detail_view_product">
+    
+
+
+    <div class="navigation nav_page_item">
+        <div class="bt-ct1">
+            <div>
+                <ul>
+                  <!--  <li><a href="/">Главная</a></li>-->
+                    <li><a href="/product"><?=yii::t('app','Каталог')?></a></li>
+
+                    <?php if(isset($breadcrumbs[0]['url'])):?>
+                    <li><a href="/product/<?=$breadcrumbs[0]['url']?>"><?=$breadcrumbs[0]['label']?></a></li>
+                    <?php endif; ?>
+
+                    <?php if(isset($breadcrumbs[1]['url'])):?>
+                        <li><a href="/product/<?=$breadcrumbs[1]['url']?>"><?=$breadcrumbs[1]['label']?></a></li>
+                        <li><span><?=$breadcrumbs[2]['label']?></span></li>
+                    <?php else: ?>
+                        <li><span><?=$breadcrumbs[1]['label']?></span></li>
+                    <?php endif; ?>
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <?//    echo $this->render('@app/views/site/breadcrumbs',['breadcrumbs'=> $breadcrumbs]);?>
+
+    <div class="sld1">
+                <div class="fl1 fl-slider">
+                    <ul class="slides">
+                        <?php for($i=0;$i<10;$i++):
+                            if(isset($images[$i]))
+                                $file = (new app\components\ImageComponent)->adaptive($images[$i],1920,667);
+                            else
+                                $file='http://iphone6.96.lt/img/sld1.jpg';
+                            ?>
+                         <li><div><img src="<?=$file;  ?>" alt=""></div></li>
+                        <?php endfor; ?>
+                    </ul>
+                </div>
+            </div>
+            <div class="sld-nav-sld1">
+                <div class="fl2 fl-nav">
+                    <div class="fr1"></div>
+                    <div class="fr2"></div>
+                    <ul class="slides">
+                        <?php for($i=0;$i<10;$i++):
+                            if(isset($images[$i])  )
+                                $file = (new app\components\ImageComponent)->crop($images[$i],90,55,false,0,'-preview-w1920-h667.png');
+                            else
+                                $file='http://iphone6.96.lt/img/sld1.jpg';
+                            ?>
+
+
+
+                        <li><div><img src="<?=$file;  ?>" alt=""></div></li>
+                        <?php endfor; ?>
+                    </ul>
+                </div>
+            </div>
+    <div class="sz1 page_detail_product_see">
+
+        <div class="for_see_img_detail_product">
+            <div class="photo_big_preview_detail_info"><img src="<?=(new app\components\ImageComponent)->adaptive($images[0],452,452)?>" alt=""><span class="img-zoom-in"><span>Наведите курсор, чтобы увеличить</span></span></div>
+
+            <nav class="preview_detail_img">
+
+
+
+                <?php for($i=0;$i<7;$i++):
+                    if(isset($images[$i])  ) {
+                        $file = (new app\components\ImageComponent)->adaptive($images[ $i ], 452, 452);
+                        $file2 = (new app\components\ImageComponent)->adaptive($images[$i],1000,1000);
+                    }
+                    else
+                        $file='http://iphone6.96.lt/img/sld1.jpg';
+                    ?>
+                    <a href="<?=$file2?>" <?=($i==0)?'class="current"':''?>><span><img src="<?=$file?>" alt=""></span></a>
+                <?php endfor; ?>
+
+
+            </nav>
+        </div>
+        <div class="detail_info_text_product">
+            <div class="ll1">
+                <div class="tit1 <?=($data->hot>50)?'j1':''?>"><?=$data->catalog_name?>
+                    <?php if($data->catalog_bonus):?>
+                        <?php  if($data->catalog_bonus): ?>
+                            <span class="j<?php switch($data->catalog_bonus){
+                                case '10': echo "3";break;
+                                case '20': echo "1";break;
+                                case '30': echo "2";break;
+                            }?>"></span>
+                        <?php endif;?>
+                    <?php endif;?>
+                </div>
+                <div class="content1">
+                    <div class="sz2">
+                <?php
+                    $char = count($data->character);?>
+                        <ul>
+                            <li>
+                                <ul>
+                                    <?php for($i=0;$i<($char/2);$i++):?>
+                                    <li><b><?=$data->character[$i]['name']?>:</b> <?=$data->character[$i]['attribute']?></li>
+                                    <?php endfor; ?>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <?php for(;$i<$char;$i++):?>
+                                        <li><b><?=$data->character[$i]['name']?>:</b> <?=$data->character[$i]['attribute']?></li>
+                                    <?php endfor; ?>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <p><b><?=yii::t('app','Описание')?>:</b> <?=$data->catalog_shortpreview?></p>
+                </div>
+            </div>
+            <div class="rr1">
+                <div class="tit1 <?=($data->hot>50)?'j1':''?>"><?=$data->catalog_name?>
+                    <?php  if($data->catalog_bonus): ?>
+                        <span class="j<?php switch($data->catalog_bonus){
+                            case '10': echo "3";break;
+                            case '20': echo "1";break;
+                            case '30': echo "2";break;
+                        }?>"></span>
+                    <?php endif;?>
+                </div>
+                <?php $countBits= (yii::$app->user->getId())?\app\models\Bits::countBits($data->catalog_id,yii::$app->user->getId()):0; ?>
+                <div class="ov-t1">
+                    <?php $bits = \app\models\Bits::getInfo($data->catalog_id);?>
+                    <div class="for_item">
+                        <div class="item1"><span id="persent"><?=$bits['persent']?>%</span><?=yii::t('app','собрано')?></div>
+                        <div class="item1"><span id="price"><?=$data->getPrice()?></span><?=yii::t('app','цена')?></div>
+                        <div class="item1"><span id="step"><?=$data->priceStep()?></span><?=yii::t('app','купить за')?></div>
+                    </div>
+                    <div class="rt1">
+                        <?php if($countBits!=3):?>
+                        <a href="<?=(yii::$app->user->getId())?'#':'/user/registration'?>" class="make_bit" data-step="1"><?=yii::t('app','Купить 1 доль')?></a>
+                        <?php else: ?>
+                            <a href="<?=(yii::$app->user->getId())?'#':'/user/registration'?>" data-step="1" class="notactive">Купить 1 доль</a>
+                        <?php endif; ?>
+                    </div>
+                    <div class="t1"> <?=yii::t('app','Внимание!')?></div>
+                   <p> <?=\app\modules\system\models\TextWidget::getTpl('view_mess',['date'=>date("d-m-Y H:i:s",strtotime($data->catalog_dateend)) ]);?></p>
+                    <p> <?php if($date=\app\models\Bits::lastTiraj($data->catalog_id)):
+
+                            echo yii::t('app','Последний розыгрыш был ').$date;?>
+                    <?php endif; ?></p>
+
+                    <?php
+                    if($countBits):?>
+                        <?=\app\modules\system\models\TextWidget::getTpl('make_bits',['bits'=>$countBits]);?>
+                    <?php endif; ?>
+                   <!-- <p>This project will only be funded if at least €30,000 funded if at least This project will only</p>
+                    <p><a href="">Подробнее</a></p>-->
+                </div>
+            </div>
+            
+        </div>
+        <div class="clear"> </div>
+    </div>
+    <div class="line_gray"></div>
+    <section id="content">
+        <h1><?=yii::t('app','Описание')?> <?=$data->catalog_name?></h1>
+
+        <?=str_replace('img/','/img/',($data->catalog_text))?>
+        <div class="hh1"></div>
+        <div class="title1"><?=yii::t('app','Похожие товары')?></div>
+        <div class="sld3">
+            <div class="pv1"></div>
+            <div class="nv1"></div>
+            <div class="owl1 owl-carousel owl-theme">
+
+                <?
+                    echo  \app\modules\catalog\widgets\items\SameCatWidget::widget(
+                        [
+                            'catid'=>$data->catalogcatid,
+                            'tpl'=>'widgets/view_products_in_product' ,
+                            'urlPrefix'=>'/product/',
+                            'limit' => 12,
+
+                        ]);
+
+                ?>
+
+
+
+            </div>
+        </div>
+
+        <? echo $this->render('reviews',['model'=>$data]);?>
+
+    </section>
+
+
+
+    <div class="modal-circles dm-overlay" id="for_circles_modal">
+        <div class="dm-table">
+            <div class="dm-cell">
+                <div class="dm-bg-close"></div>
+                <div class="dm-modal">
+                    <a href="#for_circles_modal" class="close"></a>
+
+                        <div class="ov-rd1">
+                            <div class="item1 active item_for_circles">
+
+                                    <span class="st-text1">
+                                        <span></span>
+                                        <p></p>
+                                    </span>
+
+                            </div>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        $('.make_bit').click(function(){
+            var stepPrice='<?=str_replace($name=\app\modules\system\models\Course::getName(),'', str_replace(',','.',$data->priceStep()))?>',
+                name ='<?=$name?>',
+                step=$(this).attr('data-step')
+               ;
+            $(".agree").remove();
+
+
+            $.ajax({
+                url:  '/bit/info?step='+$(this).attr('data-step')+'&product=<?=$data->catalog_id?>' ,
+                headers :{ "X-CSRF-Token": $('meta[name=csrf-token]').attr("content") },
+                type:'PUT',
+                success: function(data)
+                {
+                    var text='<?=\app\modules\system\models\TextWidget::getTpl('popap_on_bit');?>';
+
+                    $('body').addClass('body-active');
+                    $('#for_circles_modal').delay(200).fadeIn().addClass('active');
+                    $('.st-text1').children('span').html("<?=yii::t('app','Принять участие в розыгрыше товара')?>");
+
+                    console.log( stepPrice+'*'+step) ;
+                    if(data.status =='error'){
+                        text=text+'<br><br><b>'+data.can+'</b>';
+                        step=data.step;
+                    }
+
+                    if(data.persent)
+                        $('#persent').html(data.persent+'%');
+                    console.log( stepPrice+'*'+step +'='+ stepPrice*step) ;
+                    result = Math.round((stepPrice*step)*100) /100;
+                    var button = '<button type="button" data-step="'+step+'" class="agree" ><?=yii::t('app','Подтвердить участие за')?> '+result+
+                        '<?=\app\modules\system\models\Course::getName()?></button>'
+
+                    $('.st-text1').children('p').html(text);
+                    $(button).insertAfter($('.st-text1').parent('div'));
+
+
+                    $('.agree').click(function(){
+                        var el = $(this);
+                        $(this).html('Ожидайте ответа, <img src="/img/bx_loader.gif" style="margin-top:7px;" />').attr('disabled','disabled');
+                        $.ajax({
+                            url:  '/add-bit?step='+$(this).attr('data-step')+'&product=<?=$data->catalog_id?>' ,
+                            headers :{ "X-CSRF-Token": $('meta[name=csrf-token]').attr("content") },
+                            type:'PUT',
+
+                            success: function(data)
+                            {
+
+                                $('body').addClass('body-active');
+                                $('#for_circles_modal').delay(200).fadeIn().addClass('active');
+                                $('.st-text1').children('span').html(data.title);
+                                $('.st-text1').children('p').html(data.message);
+                                if(data.status == 'ok'){
+                                    $('#persent').html(data.data.persent+'%');
+                                    $('#step').html(data.data.step);
+                                    $('#price').html(data.data.price);
+                                }
+                                el.remove();
+                            }
+                        });
+                    })
+                }
+            });
+
+
+
+
+
+
+            });
+    </script>
+</div>

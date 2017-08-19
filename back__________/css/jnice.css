@@ -1,0 +1,223 @@
+/**/
+/*quant inputs*/
+.mquant_w{display:inline-block;}
+.mquant_w .qcontrol{height:20px;width:20px;display:inline-block;vertical-align:top;background:url('../images/quant.png') no-repeat;cursor:pointer;
+-webkit-user-select: none;
+-moz-user-select: none;
+-khtml-user-select: none; }
+.mquant_w .qcontrol.qinc{background-position:right top;}
+.mquant{height:18px;width:18px;border:1px solid #b3b3b3;text-align:center;}
+
+/*buttons*/
+.button-jNice{padding: 0 4px;display:inline-block;vertical-align:top;cursor:pointer;position:relative;text-decoration:none;height:28px;line-height:28px;color:#fff !important;font-size:12px;text-align:center;background:#6d9aea; border:0px solid #c10e0e;}
+.button-jNice input{width:100%;height:100%;position:absolute;lefT:0;top:0;border:0;background:url('../images/spacer.gif');cursor:pointer;}		
+
+
+
+
+/* -------------
+ * teaxarea
+ * ------------- */
+ .jNiceTareaWrapper{position:relative;padding:0px 4px 0px 8px;display:block;}
+ .jNiceTareaBg{width:100%;display:block;}
+ .jNiceTarea{border:0;overflow:auto;outline:none !important;}
+ .jNiceTareaWrapper textarea{border:0px solid #7e7e7e;outline:none !important;height:100%;width:100% !important;position:relative;z-index:1;padding:5px;font-size:12px;font-family:tahoma,sans-serif;margin:0 0 0 -8px;background:#fff;}
+ 
+ /* -------------
+ * Inputs
+ * ------------- */
+ 
+ 
+ 
+ 
+ /*default*/
+.jNiceInputWrapper {position:relative;display:block;vertical-align:top;height:37px;}
+.jNiceInputBg {height:35px;display:block;border:1px solid #f9f9f9;background:#ffffff;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+}
+.jNiceInputWrapper_hover .jNiceInputBg {
+    border-color: #afafaf;
+    -webkit-box-shadow: 0 0 10px 0 #afafaf;
+box-shadow: 0 0 10px 0 #afafaf;
+}
+.jNice-error .jNiceInputBg {
+    border-color: #fb9595;
+    -webkit-box-shadow: 0 0 10px 0 #fb9595;
+box-shadow: 0 0 10px 0 #fb9595;
+}
+.jNiceInputRight{
+    float: right;
+    height: 12px;
+    margin: 10px;
+    width: 16px;
+    background: url('../img/sprite_form.png');
+}
+.jNice-error .jNiceInputRight{
+    background-position: center -24px;
+}
+.jNiceInputWrapper input {position:absolute;left:0;top:0;outline:none !important;width:100%;height:100%;z-index:1;padding:0 8px;font-family:tahoma,sans-serif;height:35px;border:0 !important;background:transparent;color:#000;
+}
+
+.jNiceInputWrapper input::-webkit-input-placeholder {
+   color: black;
+}
+
+.jNiceInputWrapper input:-moz-placeholder { /* Firefox 18- */
+   color: black;  
+}
+
+.jNiceInputWrapper input::-moz-placeholder {  /* Firefox 19+ */
+   color: black;  
+}
+
+.jNiceInputWrapper input:-ms-input-placeholder {  
+   color: black;  
+}
+
+
+.jNiceInputWrapper.iimg input{padding-left:35px;}
+.imgNice{position:absolute; display:block; top:0; left:0;height:36px;width:35px; text-align: center;}
+.imgNice img{display: inline-block; vertical-align: middle;}
+.imgNice:after{content:'';height:100%;width:0px;display:inline-block;vertical-align:middle;}
+
+
+.jNiceInputWrapper.fileupload{margin:0 -108px 0 0;padding:3px 108px 3px 0;cursor:pointer;overflow:hidden}
+.jNiceInputWrapper.fileupload .jNiceInputBg {border:0px solid #dadada;outline:none !important;height:22px;width:auto;position:relative;z-index:1;padding:0 10px;font-size:12px;font-family:tahoma,sans-serif;position:relative;margin:0 0 0 0;text-align:left;white-space:nowrap;overflow:hidden;line-height:22px;color:#999999;background:#fff;}
+.jNiceInputWrapper.fileupload input {cursor:pointer;font-size:300px;padding:0;cursor:pointer;
+  filter: alpha(opacity=1);
+  -moz-opacity: 0.01;
+  opacity: 0.01;}
+.jNiceInputWrapper.fileupload .ubutton{float:left;display:inline-block;position:absolute;right:0px;top:0;width:90px;height:28px;line-height:28px;color:#fff !important;font-size:14px;font-weight:bold;text-align:center;background:url('../images/button-gray.png') #6d9aea; border:0px solid #c10e0e;
+-webkit-box-shadow:  -1px 0px 2px 0px rgba(0, 0, 0, 0.3);
+        box-shadow:  -1px 0px 2px 0px rgba(0, 0, 0, 0.3);
+-o-background-size: 100% 100%;
+-webkit-background-size: 100% 100%;
+-khtml-background-size: 100% 100%;
+-moz-background-size: 100% 100%; 
+background-size: 100% 100%;
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/button-gray.png', sizingMethod='scale');
+-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/button-gray.png', sizingMethod='scale')";}
+.jNiceInputWrapper.blue .ubutton{
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/button-gray.png', sizingMethod='scale');
+-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/button-gray.png', sizingMethod='scale')";}
+
+.jNiceInputWrapper.fileupload .ubutton .ileft{display:block;margin: 0 10px 0 0;padding: 0 0 0 10px;height:100%;}
+.jNiceInputWrapper.fileupload .ubutton .iright{display:block;width:  10px;height:100%;position:absolute;right:0;top:0;}
+
+
+
+
+
+.jRadioWrapper {display:inline-block;z-index: 2;width:16px;height:16px;margin: 0px 5px;}
+.jCheckWrapper {display:inline-block;z-index: 2;width:16px;height:16px;margin: 0px 5px;}
+.jNiceRadio {
+	background: transparent url('../images/radio.png') no-repeat left top;
+	height: 16px;
+	width: 16px;
+	position:absolute;left:0px;top:0px;cursor:pointer;vertical-align:middle;
+	
+}
+/* -------------
+ * 
+ * ------------- */
+.jNiceCheckbox {
+	background: transparent url('../images/checkbox.png') no-repeat left top;
+	height: 16px;
+	width: 16px;
+	position:absolute;left:0px;top:0px;cursor:pointer;vertical-align:middle;
+}
+.jNiceCheckbox:hover,.jNiceRadio:hover{background-position:right top;}
+.jNiceChecked { background-position: left bottom;}
+.jNiceChecked:hover { background-position: right bottom;}
+.jNiceFocus {margin:0px;border: dotted 1px #666666; }
+.jNiceHidden {opacity:0;z-index:-1;position:relative;}
+.jNiceWrapper {display:inline-block;position:relative;}
+.jNiceWrapper input {outline:none;moz-outline:none;}
+
+
+
+
+/**/
+.jNiceSelectWrapper select {border:none;margin:0;padding:0;height:34px;}
+.jNiceSelectWrapper {
+	border:1px solid #eaeaea;
+	display:block;position:relative;
+	height: 34px;
+	z-index:3;
+	cursor:pointer;
+	font-weight:normal;
+	-webkit-border-radius: 18px; 
+    border-radius: 18px;
+	
+}
+.jNiceSelectWrapper:after{content:''; display:block; position:absolute; bottom:-22px; height:20px; left:0; right:0; background:url('../images/white-shadow.png') no-repeat top center;}
+.jNiceSelectWrapper iframe {position:absolute;z-index:1;width:100%;left:0px;top:0px;}
+
+.jNiceSelectWrapper .jNiceSelectText img{float:right;position:relative;top:5px;}
+.jNiceSelectWrapper .jNiceSelectColor{float:right;position:relative;top:3px;height:16px;width:30px;}
+.jNiceSelectWrapper .jNiceSelectText {
+	height: 100%;
+	padding: 0px 0 0 24px;
+	position:absolute;left:0;top:0;
+	line-height: 34px;
+	white-space:nowrap;
+	overflow:hidden;float:none;position:absolute;z-index:100;
+	font-size:14px;font-family: 'pfdintextcondpro';	color:#c5c4c4;
+	background:#fff;
+		-webkit-border-radius: 18px; 
+    border-radius: 18px;
+}
+
+.jNiceSelectWrapper .jNiceSelectOpen {
+	padding: 0 0 0 28px;
+	height: 28px;
+	background: url('/images/select.png') no-repeat top center;
+	z-index: 100;
+	display: block;
+	position: absolute;
+	right: 3px;
+	top: 3px;
+}
+.jNiceSelectWrapper:hover .jNiceSelectOpen{background-position:left bottom;}
+
+.jNiceSelectWrapper ul {
+	border:1px solid #eaeaea;
+	top: 15px;
+	padding:20px 0 20px 0;
+	
+	position:absolute;left:-1px;list-style:none;display: none;margin:0;overflow-y:auto;z-index:99;min-width: 100%;white-space:nowrap;
+	max-height:222px;
+	-webkit-border-radius: 4px; 
+    border-radius: 4px;
+}
+.jNiceSelectWrapper ul:after{content:''; z-index:-1; position:absolute; top:20px; left:0; right:0; bottom:0;background:#FFF;
+	-webkit-border-radius: 4px; 
+    border-radius: 4px;}
+
+.jNiceSelectWrapper ul  li{	background-color: #fff;padding:10px 0 0 0;}
+
+
+.jNiceSelectWrapper ul a img{float:right;position:relative;top:7px;}
+
+.jNiceSelectWrapper ul a {
+	font-size:14px;font-family: 'pfdintextcondpro';color:#5a5a5a;
+	border-color:#a7da7e;
+	border-style:dotted;
+	border-width:0 0px 1px 0px;	
+	display:block;
+	padding: 0 ;text-decoration:none;
+	line-height: 22px;
+	margin:0 20px 0 20px;
+}
+
+.jNiceSelectWrapper ul a:hover {color:#70b439; border-color:#aeadad; }
+.jNiceSelectWrapper ul a.selected {color:#b94523; border-color:#aeadad;}
+
+
+
+
+
+.jNice-default .jNiceSelectText{-webkit-border-radius: 0px;-moz-border-radius: 0px;border-radius: 0px;font-size:17px;color:#303030;background:url('../images/downarr.png') no-repeat right center;}
+.jNice-default ul{top:30px;padding:0 0 0 0;}
+.jNice-default ul a{padding-left:10px;font-size:17px;color:#303030;line-height:30px;}
